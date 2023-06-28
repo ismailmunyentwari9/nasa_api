@@ -1,70 +1,102 @@
-# Getting Started with Create React App
+# 📗 Table of Contents
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [📖 About the Project](#About-the-Project)
+  - [🛠 Built With](#built-with)
+    - [Tech Stack](#tech-stack)
+    - [Key Features](#key-features)
+  - [Setup](#setup)
+- [👥 Authors](#Authors)
+- [🔭 Future Features](#future-features)
+- [🤝 Contributing](#contributing)
+- [⭐️ Show your support](#Show-your-support)
+- [🙏 Acknowledgements](#Acknowledgments)
+- [📝 License](#license)
 
-## Available Scripts
+<!-- PROJECT DESCRIPTION -->
 
-In the project directory, you can run:
+# [About the Project] <a name="NASA_APP"></a>
 
-### `npm start`
+**[NASA_app]**The NASA Image and Video Library API App is a powerful tool designed to provide users with access to a vast collection of captivating images and videos from NASA's extensive database. With this app, users can explore and discover the wonders of space, celestial bodies, missions, and scientific discoveries made by NASA.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+##  Built With <a name="RUBY"></a>
+### Tech Stack <a name="tech-Stack"></a>
+- **[REACT]**
+- **[BOOTSTRAP]**
+<details>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/REACT">RUBY</a></li>
+  </ul>
+</details>
+<details>
+  <ul>
+    <li><a href="https://developer.mozilla.org/en-US/docs/Web/BOOTSTRAP">RAILS</a></li>
+  </ul>
+</details>
+<!-- Features -->
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Key Features <a name="key-features"></a>
 
-### `npm test`
+- **[HOME_COMPONENT]**
+- **[DAY_PICTURE_COMPONENT]**
+- **[IMAGE&VIDEO_COMPONENT]**
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### `npm run build`
+### Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone this repository to your desired folder using the following command; git clone https://github.com/ismailmunyentwari9/nasa_api
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- AUTHORS -->
 
-### `npm run eject`
+## Authors <a name="authors"></a>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+👤 **Ismail Munyentwari**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- GitHub: [@Ismail-Munyentwari](https://github.com/ismailmunyentwari9)
+- LinkedIn: [@Ismail-Munyentwari](https://www.linkedin.com/in/munyentwari-ismail-754718191/)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+<!-- FUTURE FEATURES -->
 
-## Learn More
+## Future Features <a name="future-features"></a>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- [ ] **[MOBILE_APP_VERSION]**
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Code Splitting
+<!-- CONTRIBUTING -->
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+##  Contributing <a name="contributing"></a>
 
-### Analyzing the Bundle Size
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feel free to check the [issues page](https://github.com/ismailmunyentwari9/nasa_api/issues).
 
-### Making a Progressive Web App
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<!-- SUPPORT -->
 
-### Advanced Configuration
+## Show your support <a name="support"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+If you like this project then don't forget to give a star ⭐ on this repository.
 
-### Deployment
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<!-- ACKNOWLEDGEMENTS -->
 
-### `npm run build` fails to minify
+## Acknowledgments <a name="acknowledgements"></a>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+I would like to thank nasa, for the original API documentation I used in this project   [API DOCUMENTATION](https://api.nasa.gov/)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- LICENSE -->
+
+## License <a name="license"></a>
+
+This project is [MIT](LICENSE) licensed.
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
