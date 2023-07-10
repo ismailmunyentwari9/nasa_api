@@ -1,0 +1,59 @@
+.home-bg {
+  background: url('https://i.pinimg.com/originals/04/e0/6d/04e06d4a6b779e08f6f89245633d8fb7.gif');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.middle-text {
+  background-color: rgb(8, 7, 7);
+  margin-left: 25%;
+  flex-direction: column;
+  display: flex;
+  width: 45%;
+  justify-content: center;
+  align-items: center;
+  margin-top: 17%;
+  padding: 15px;
+  opacity: 0.7;
+  box-shadow: 12px 12px 12px  rgba(245, 241, 241, 0.452);
+  border-radius: 15px;
+}
+
+.middle-text p {
+  font-size: 20px;
+  color: white;
+}
+
+.middle-text p:first-child {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+  align-items: center;
+}
+
+.middle-text span img {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+}
+
+.middle-text span {
+  font-size: 30px;
+  margin-right: 12px;
+  font-family: monospace;
+}
+
+.middle-text span:nth-child(1) {
+  color: blue;
+}
+
+.middle-text span:nth-child(2) {
+  color: rgba(240, 240, 229, 0.795);
+}
+
+.middle-text span:nth-child(3) {
+  color: rgb(255, 165, 0);
+}

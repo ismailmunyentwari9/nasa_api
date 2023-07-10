@@ -1,0 +1,29 @@
+
+.day-picture {
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  background: black;
+  color: rgb(255, 255, 255);
+}
+
+.day-picture-title {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.day-picture-subtitle {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.day-picture-image {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.day-picture-description {
+  font-size: 25px;
+  line-height: 1.5;
+}
