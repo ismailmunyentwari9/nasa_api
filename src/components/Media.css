@@ -1,7 +1,58 @@
 .media-tank {
-  background: black;
-  padding-top: 5%;
-  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f2f2f2;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 20px;
+}
+
+.search-container {
+  margin-bottom: 20px;
+}
+
+.search-container form {
+  display: flex;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 200px;
+}
+
+.search-container button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px;
+}
+
+.search-container button:hover {
+  background-color: #0056b3;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 .media-container {
@@ -11,73 +62,45 @@
 }
 
 .media-item {
-  background-color: #090808;
-  padding: 10px;
+  cursor: pointer;
+  text-align: center;
 }
 
-.media-item img,
-.media-item video {
+.media-item img {
   width: 100%;
+  height: auto;
+  border-radius: 8px;
 }
 
-@media screen and (max-width: 768px) {
-  .media-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
+p {
+  font-size: 16px;
+  margin-top: 20px;
 }
 
-.popup {
-  position: fixed;
+.media-item p {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.embed-responsive {
+  position: relative;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+
+.embed-responsive-item {
+  position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.loading {
   display: flex;
-  align-items: center;
   justify-content: center;
-  z-index: 9999;
-}
-
-.popup-content {
-  position: relative;
-  max-width: 800px;
-  border: 2px solid white;
-  width: 90%;
-  background-color: rgb(25, 23, 23);
-  padding: 20px;
-}
-
-.popup-content h3 {
-  font-size: 24px;
-  margin-bottom: 10px;
-}
-
-.popup-content p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.popup-content .close {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 24px;
-  cursor: pointer;
-  color: #888;
-}
-
-@media screen and (max-width: 768px) {
-  .popup-content {
-    max-width: 90%;
-  }
-}
-
-.media-details {
-  color: white;
-}
-
-.details-img {
-  width: 50%;
-  height: 10%;
+  align-items: center;
+  height: 200px;
+  font-size: 18px;
+  font-weight: bold;
 }

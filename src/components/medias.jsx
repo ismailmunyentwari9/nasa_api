@@ -3,13 +3,16 @@
 /* eslint-disable jsx-a11y/no-static-element-interactions */
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import './Media.css';
+import { useNavigate } from 'react-router-dom';
 import MediaDetails from './MediaDetails';
+import './Media.css';
+import './search.css';
 
 const Media = () => {
+  const navigate = useNavigate();
   const [mediaType, setMediaType] = useState('both');
+  const [searchQuery, setSearchQuery] = useState('');
   const [items, setItems] = useState([]);
-  const [selectedItem, setSelectedItem] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -39,13 +42,20 @@ const Media = () => {
     setMediaType(event.target.value);
   };
 
-  const handleItemClick = (item) => {
-    setSelectedItem(item);
+  const handleSearch = (event) => {
+    event.preventDefault();
+    const query = event.target.elements.search.value;
+    setSearchQuery(query);
   };
 
-  const closeDetails = () => {
-    setSelectedItem(null);
+  const handleItemClick = (itemId) => {
+    navigate(`/media/${itemId}`);
   };
+
+  const filteredItems = items.filter((item) => {
+    const title = item.data[0]?.title?.toLowerCase();
+    return title.includes(searchQuery.toLowerCase());
+  });
 
   return (
     <div className="container media-tank">
@@ -84,66 +94,57 @@ const Media = () => {
         </label>
       </div>
 
+      <div className="search-container">
+        <form onSubmit={handleSearch}>
+          <input type="text" name="search" placeholder="Search..." />
+          <button type="submit">Search</button>
+        </form>
+      </div>
+
       <h2>Media:</h2>
 
       <div className="media-container">
-        {items.map((item) => {
-          if (
-            mediaType === 'both'
-            || (mediaType === 'image' && item.data[0]?.media_type === 'image')
-            || (mediaType === 'video' && item.data[0]?.media_type === 'video')
-          ) {
-            if (item.data[0]?.media_type === 'image') {
-              return (
-                <div
-                  className="media-item"
-                  key={item.data[0].nasa_id}
-                  onClick={() => handleItemClick(item)}
-                >
-                  <img
-                    src={item.links[0].href}
-                    alt={item.data[0].title}
-                    className="img-fluid"
-                  />
-                </div>
-              );
-            } if (item.data[0]?.media_type === 'video') {
-              const previewLink = item.links.find((link) => link.rel === 'preview');
-              const videoUrl = previewLink.href.replace('preview.', '');
-              const captionLink = item.links.find((link) => link.rel === 'captions');
-              const captionSrc = captionLink ? captionLink.href : null;
+        {filteredItems.map((item) => {
+          const mediaType = item.data[0]?.media_type;
+          const title = item.data[0]?.title;
+          const href = item.links?.[0]?.href;
 
-              return (
-                <div
-                  className="media-item"
-                  key={item.data[0].nasa_id}
-                  onClick={() => handleItemClick(item)}
-                >
-                  <div className="embed-responsive embed-responsive-16by9">
-                    <video controls className="embed-responsive-item">
-                      {captionSrc && <track kind="captions" src={captionSrc} label="English" />}
-                      <source src={videoUrl} type="video/mp4" />
-                      Your browser does not support the video tag.
-                    </video>
-                  </div>
-                </div>
-              );
-            }
+          if ((mediaType === 'image' || mediaType === 'video') && title && href) {
+            return (
+              <div
+                className="media-item"
+                key={item.data[0].nasa_id}
+                onClick={() => handleItemClick(item.data[0].nasa_id)}
+              >
+                {mediaType === 'image' && (
+                  <>
+                    <img src={href} alt={title} className="img-fluid" />
+                    <p>{title}</p>
+                  </>
+                )}
+
+                {mediaType === 'video' && (
+                  <>
+                    <div className="embed-responsive embed-responsive-16by9">
+                      {/* Embed the video */}
+                      <video controls className="embed-responsive-item">
+                        <source src={href} type="video/mp4" />
+                        Your browser does not support the video tag.
+                      </video>
+                    </div>
+                    <p>{title}</p>
+                  </>
+                )}
+              </div>
+            );
           }
+
           return null;
         })}
       </div>
 
-      {selectedItem && (
-        <div className="popup">
-          <div className="popup-content">
-            <span className="close" onClick={closeDetails}>
-              &times;
-            </span>
-            <MediaDetails item={selectedItem} />
-          </div>
-        </div>
-      )}
+      {/* Render the MediaDetails component with the match prop */}
+      <MediaDetails />
     </div>
   );
 };

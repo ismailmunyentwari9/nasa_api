@@ -5,6 +5,8 @@ import {
 import Home from './components/home';
 import DayPicture from './components/daypicture';
 import Media from './components/medias';
+import MediaDetails from './components/MediaDetails';
+
 import './App.css';
 
 const App = () => (
@@ -27,6 +29,8 @@ const App = () => (
       <Route path="/" element={<Home />} />
       <Route path="/daypicture" element={<DayPicture />} />
       <Route path="/media" element={<Media />} />
+      <Route path="/media/:id" element={<MediaDetails />} />
+
     </Routes>
   </Router>
 );
